@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Train Reservation System</title>
+</head>
+<body>
+  <h1>Train Reservation System</h1>
+  <p id="msg">Loading...</p>
+
+  <script>
+    fetch('/api/hello')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('msg').textContent = data.message;
+      });
+  </script>
+</body>
+</html>
